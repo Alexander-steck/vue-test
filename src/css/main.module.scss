@@ -1,0 +1,200 @@
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
+
+  #nav {
+    width: 100%;
+    position: relative;
+  }
+
+  #nav a {
+    margin: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  #nav a:hover {
+    font-weight: bold;
+  }
+
+  #nav a:before {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #A3E4D7;
+    position: absolute;
+    top: 32px;
+    transition: .5s;
+  }
+
+  #nav a:nth-child(odd):hover:before {
+    width: 50px;
+  }
+
+   #nav a:nth-child(even):hover:before {
+    width: 100px;
+  }
+
+  .main {
+    width: 100%;
+    margin: 20px auto;
+    position: relative;
+  }
+
+  .spinner {
+    width: 18px;
+    height: 18px;
+    border: 10px solid #00BFA5;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: spinner-name;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
+    left: calc(50% - 25px);
+    top: 68px;
+  }
+
+  @keyframes spinner-name {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
+
+  .spinner:before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 18px;
+    z-index: 1;
+    background-color: white;
+    transform: rotate(35deg);
+  }
+
+.wrapper {
+    width: 80%;
+    margin: 20px auto;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+
+  }
+
+  .table-user {
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    background-color: white;
+  }
+
+  .table-user th {
+    background-color: #F2F4F4;
+  }
+
+  .table-user, .table-user td {
+    padding: 20px 10px;
+  }
+
+  .table-user tr:nth-child(odd) {
+    background-color: #A3E4D7;
+  }
+
+   .table-user tr:nth-child(even) {
+    background-color: white;
+  }
+
+  .table-user__btn-id {
+    width: 70%;
+    padding: 5px 0;
+    font-size: 18px;
+    text-decoration: underline;
+    color: blue;
+    display: inline-block;
+  }
+
+  .table-user__btn-id:hover {
+    cursor: pointer;
+  }
+
+  .form-register {
+    width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid #00bfa5;
+    padding: 100px 50px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.form-register__box {
+    width: 100%;
+    margin: 20px 0px;
+    overflow: hidden;
+}
+
+.form-register__box label {
+    float: left;
+    display: block;
+    width: 25%;
+    text-align: left;
+}
+
+.input-register {
+    width: 70%;
+    height: 20px;
+    float: right;
+    font-size: 16px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    outline: none ;
+}
+
+.input-register:invalid {
+   background-color: rgba(236, 112, 99, 0.2);
+}
+
+.form-register__submit {
+    padding: 5px 40px;
+    background-color: rgba(0,191,165, 0.8);
+    border: none;
+    border-radius: 5px;
+    float: right;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.form-register__submit:hover {
+    background-color: #00BFA5;
+    cursor: pointer;
+}
+
+.error-message {
+    display: block;
+    float: right;
+    background-color: red;
+    color: white;
+    padding: 5px;
+}
+
+.not-found {
+  text-align: center;
+  font-size: 48px;
+  color: gray;
+}
+
+.not-found-text {
+  text-align: center;
+  font-size: 18px;
+  color: gray;
+}
