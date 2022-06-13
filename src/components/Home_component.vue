@@ -20,9 +20,9 @@
 <script>
 import config  from "@/configuration/config.js";
 import axios from "axios";
-
+import router from '@/router/index.js';
 export default ({
-   
+  
   data() {
     return {
       Url: config.config.url,
@@ -37,7 +37,7 @@ export default ({
     information(event){
         this.userId = event;
         config.config.userId = this.userId;
-        
+        router.push({ path: 'user', query: { Id: event }}); 
     },
 
     homeResponse(respons){

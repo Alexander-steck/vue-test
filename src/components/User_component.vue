@@ -26,14 +26,14 @@
 <script>
     import axios from "axios";
     import config  from "@/configuration/config.js";
-   
+    
     export default {
         
          data() {
             return {
                 Url: config.config.url,
                 userInfo: null,
-                userId: config.config.userId,
+                userId: this.$route.query.Id,
                 nameInfo: null,
                 emailInfo: null,
                 genderInfo: null,

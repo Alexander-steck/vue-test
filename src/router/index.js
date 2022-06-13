@@ -11,6 +11,7 @@ import  NotFound  from "@/pages/NotFound.vue";
     {
       path: '/user',
       name: 'user',
+      props: true,
       component: () => import('@/pages/user_page.vue')
     },
     {
